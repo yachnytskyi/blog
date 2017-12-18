@@ -1,0 +1,14 @@
+ru:
+  common:
+    errors: 'Внимание: Ошибка при публикации статьи'
+    back: 'Назад'
+  posts:
+    index:
+      title: 'Статьи'
+    new:
+      title: 'Новая статья'
+    edit:
+      title: 'Редактирование'
+    form:
+      submit:
+        '%{action} статью'
