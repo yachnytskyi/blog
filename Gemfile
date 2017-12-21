@@ -35,6 +35,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'bootstrap', '~> 4.0.0.beta2.1'
 
+
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
 gem 'trix'
