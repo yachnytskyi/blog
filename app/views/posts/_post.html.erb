@@ -3,12 +3,12 @@
         <h2><%= link_to post.title, post_path(post) %></h2>
         <small>
             <time>
-        <%= post.created_at.to_date.strftime("%d %B, %Y") %> 
+        <%= post.created_at.to_date.strftime("%d %B, %Y") %>
             </time>
             |
             <%= link_to 'Изменить', edit_post_path(post) %>
             |
-            <%= link_to 'Удалить', post_path(post), method: :delete, 
+            <%= link_to 'Удалить', post_path(post), method: :delete,
             data: { confirm: 'Вы уверены?' }  %>
         </small>
     </section>
@@ -16,5 +16,10 @@
     <section class="post-summary clearfix">
         <%= image_tag post.image.url(:thumb), class: 'img-thumbnail thumb' if post.image? %>
         <%= post.summary %>
+    </section>
+
+    <section class="footer-summary">
+        <%= raw post.tags.map(&:name).map{ |t| link_to t, tag_path(t),
+          class: 'badge badge-primary' }.join(' ') %>
     </section>
 </article>

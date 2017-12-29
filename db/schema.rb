@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171218140303) do
+ActiveRecord::Schema.define(version: 20171229065050) do
 
   create_table "pictures", force: :cascade do |t|
     t.string "image"
@@ -20,5 +20,20 @@ ActiveRecord::Schema.define(version: 20171218140303) do
 
 # Could not dump table "posts" because of following StandardError
 #   Unknown type 'strring' for column 'image'
+
+  create_table "taggings", force: :cascade do |t|
+    t.integer "post_id"
+    t.integer "tag_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["post_id"], name: "index_taggings_on_post_id"
+    t.index ["tag_id"], name: "index_taggings_on_tag_id"
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end

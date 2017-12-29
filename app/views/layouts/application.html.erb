@@ -10,7 +10,7 @@
 
   <body>
    <div class="container">
-      
+
     <ul class="nav justify-content-center">
           <li class="nav-item">
             <a class="nav-link active" href="<%= posts_path %>">Статьи</a>
@@ -18,19 +18,19 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Контакты</a>
           </li>
-          
-        
-        
-        
-          <%= link_to 'Новая статья', new_post_path, 
+
+
+
+
+          <%= link_to 'Новая статья', new_post_path,
         class: 'btn btn-outline-primary pull-xs-right' %>
       </div>
 
     </ul>
-        
 
-    
-    
+
+
+
     <div class ="container main" >
       <div class="row">
         <div class ="col-md-12">
@@ -41,7 +41,20 @@
           <% end %>
         </div>
       </div>
+
+    <div class="row">
+      <div class ="col-md-8">
     <%= yield %>
-   
+  </div>
+
+  <div class ="col-md-4">
+    <% tag_cloud(Tag.counts, %w{tag1 tag2 tag3 tag4 tag5}) do |tag, css_class| %>
+      <%= link_to tag.name, tag_path(tag.name), class: css_class %>
+    <% end %>
+  </div>
+</div>
+
+
+
   </body>
 </html>
