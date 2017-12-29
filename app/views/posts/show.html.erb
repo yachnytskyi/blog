@@ -3,18 +3,20 @@
             <h1><%= @post.title %></h1>
             <small>
                 <time>
-            <%= @post.created_at.to_date.strftime("%d %B, %Y") %> 
+            <%= @post.created_at.to_date.strftime("%d %B, %Y") %>
                 </time>
                 |
                 <%= link_to 'Изменить', edit_post_path(@post) %>
                 |
-                <%= link_to 'Удалить', post_path(@post), method: :delete, 
+                <%= link_to 'Удалить', post_path(@post), method: :delete,
                 data: { confirm: 'Вы уверены?' }  %>
             </small>
         </section>
-    
+
         <section class="post-body">
             <%= image_tag @post.image.url(:large), class: 'img-show' if @post.image? %>
             <%= @post.body.html_safe %>
         </section>
     </article>
+
+    <%= render 'disqus' %>
