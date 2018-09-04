@@ -15,3 +15,14 @@ ru:
     form:
       submit:
         '%{action} статью'
+
+  categories:
+    index:
+      title: 'Категории'
+    new:
+      title: 'Новая категория'
+    edit:
+      title: 'Редактирование'
+    form:
+      submit:
+        '%{action} категорию'

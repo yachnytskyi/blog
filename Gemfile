@@ -40,7 +40,7 @@ gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
 gem 'trix'
 gem 'will_paginate', '~> 3.1.0'
-
+gem 'ancestry'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
