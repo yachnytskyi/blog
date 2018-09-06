@@ -24,6 +24,24 @@
 
           <%= link_to 'Новая статья', new_post_path,
         class: 'btn btn-outline-primary pull-xs-right' %>
+
+        <ul class="nav justify-content-center">
+              <% if user_signed_in? %>
+              <li class="nav-item">
+                <%= link_to "Выход", destroy_user_session_path, method: :delete, class: "nav-link" %>
+              </li>
+              <% else %>
+              <li class="nav-item">
+                <%= link_to "Вход", new_user_session_path, class: "nav-link" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "Регистрация", new_user_registration_path, class: "nav-link" %>
+
+              </li>
+
+            <% end %>
+          </ul>
+
       </div>
 
     </ul>
