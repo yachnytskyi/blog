@@ -9,33 +9,33 @@ document.addEventListener 'trix-attachment-remove', (event) ->
     deleteFile attachment
 
 sendFile = (attachment) ->
-    file = attachment.file 
+    file = attachment.file
     form = new FormData
-    form.append 'Content-Type', file.type 
-    form.append 'picture[image]', file 
-    xhr = new XMLHttpRequest 
-    xhr.open 'POST', '/pictures', true
+    form.append 'Content-Type', file.type
+    form.append 'picture[image]', file
+    xhr = new XMLHttpRequest
+    xhr.open 'POST', '/admin/pictures', true
 
     xhr.upload.onprogress = (event) ->
         progress = undefined
         progress = event.loaded / event.total * 100
-        attachment.setUploadProgress progress 
+        attachment.setUploadProgress progress
 
     xhr.onload = ->
         response = JSON.parse(@responseText)
         attachment.setAttributes
-            url: response.url 
+            url: response.url
             picture_id: response.picture_id
-            href: response.url 
+            href: response.url
 
-    xhr.send form 
+    xhr.send form
 
 deleteFile = (n) ->
     $.ajax
         type: 'DELETE'
-        url: '/pictures/' + n.attachment.attributes.values.picture_id 
+        url: '/admin/pictures/' + n.attachment.attributes.values.picture_id 
         cache: false
-        contentType: false 
-        processData: false 
+        contentType: false
+        processData: false
 
 return
