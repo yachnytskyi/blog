@@ -14,6 +14,24 @@ Please make sure the release file is unpacked under a Web-accessible directory. 
 app/  
 bin/  
 config/  
+db/  
+lib/  
+log/  
+public/  
+ssh.local  
+test/  
+tmp/  
+vendor/  
+.gitignore  
+Booting  
+Gemfile  
+Gemfile.lock  
+README.md  
+Rails  
+Rakefile  
+Run  
+config.ru  
+package.json
 
 db/
 lib/
