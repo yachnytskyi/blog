@@ -5,7 +5,7 @@ Thanks for viewing the blog, it was created for learning and practice. Blog - a 
 
 Build Status
 
-    Blog version 1.1
+Blog version 1.1
 
 INSTALLATION
 
