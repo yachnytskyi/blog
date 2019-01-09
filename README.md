@@ -33,29 +33,10 @@ Run
 config.ru  
 package.json
 
-db/
-lib/
-log/
-public/
-ssh.local
-test/
-tmp/
-vendor/
-.gitignore
-Booting
-Gemfile
-Gemfile.lock
-README.md
-Rails
-Rakefile
-Run
-config.ru
-package.json
-
 REQUIREMENTS
 
 The minimum requirement by Blog is that your Web server supports Ruby 2.5 or above, and Rails 5.1 or above. The blog has been tested with the embedded Rails HTTP server in Ubuntu.
-Please access the following URL to check if your Web server reaches the requirements by Yii, assuming "YiiPath" is where Yii is installed:
+Please access the following URL to check if your Web server reaches the requirements by Blog:
 
 http://localhost:3000
 
