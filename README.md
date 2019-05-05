@@ -1,5 +1,5 @@
 
-Web Blog created on Ruby on Rails and Javascript
+Web Blog created on Ruby on Rails and JavaScript
 
 Thanks for viewing the blog, it was created for learning and practice. Blog - a simple pet project
 
